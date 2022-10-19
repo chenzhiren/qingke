@@ -6,7 +6,7 @@ import pymysql
 import datetime
 
 # 连接数据库
-conn=pymysql.connect(host='localhost',user='root',passwd='root',db='qingke',port=3306)
+conn=pymysql.connect(host=st.secrets.mysql.host, user=st.secrets.mysql.user, passwd=st.secrets.mysql.password, db=st.secrets.mysql.databases, port=st.secrets.mysql.port)
 # 游标
 cur=conn.cursor()
 # 获取批次
