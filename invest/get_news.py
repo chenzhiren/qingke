@@ -5,7 +5,7 @@ from lxml import etree
 import pymysql
 import datetime
 import streamlit as st
-from ssh import SSHTunnelForwarder
+from ssh import SSHTunnelForwarder as ssh
 
 server=SSHTunnelForwarder(
        ssh_address_or_host=('192.168.0.107',22),
