@@ -10,7 +10,7 @@ server=SSHTunnelForwarder(
        ssh_address_or_host=('192.168.0.107',22),
        ssh_username=Y7000,
        ssh_password=999555,
-       remote_bind_address=('localhost',3306)
+       remote_bind_address=('localhost',3306))
     
 st.sidebar.title('清科项目')
 sidebar=st.sidebar.radio('',('资讯爬取和清洗','本周数据情况'))
