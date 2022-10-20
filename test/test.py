@@ -12,4 +12,4 @@ cur.execute(sql)
 data = cur.fetchall()
 data=pd.DataFrame(data)
 st.dataframe(data)
-print(data)
+
