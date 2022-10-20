@@ -11,7 +11,7 @@ server=SSHTunnelForwarder(
        ssh_address_or_host=('192.168.0.107',22),
        ssh_username=Y7000,
        ssh_password=999555,
-       remote_bind_address=('localhost',3306)
+       remote_bind_address=('localhost',3306))
     
 # 连接数据库
 conn=pymysql.connect(host=st.secrets.mysql.host, user=st.secrets.mysql.user, passwd=st.secrets.mysql.password, database=st.secrets.mysql.database, port=server.local_bind_port)
