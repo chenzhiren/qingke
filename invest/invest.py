@@ -4,16 +4,7 @@ import pymysql
 import pandas as pd
 import data_clean
 import money_change
-import sshtunnel
-from sshtunnel import SSHTunnelForwarder 
-
-server=SSHTunnelForwarder(
-       ssh_address_or_host=('192.168.0.107',22),
-       ssh_username='Y7000',
-       ssh_password='999555',
-       remote_bind_address=('localhost',3306))
-    
-server.start()       
+   
 st.sidebar.title('清科项目')
 sidebar=st.sidebar.radio('',('资讯爬取和清洗','本周数据情况'))
 if sidebar=='资讯爬取和清洗':
@@ -23,7 +14,7 @@ if sidebar=='资讯爬取和清洗':
 
    if st.button('清洗数据'):
        # 连接数据库
-       conn=pymysql.connect(host='127.0.0.1', user=st.secrets.mysql.user, passwd=st.secrets.mysql.password, database=st.secrets.mysql.database, port=server.local_bind_port)
+       conn=pymysql.connect(host=st.secrets.mysql.host, user=st.secrets.mysql.user, passwd=st.secrets.mysql.password, database=st.secrets.mysql.database, port=st.secrets.mysql.port)
        # 游标
        cur = conn.cursor()
        # sql语句，获取最新批次数据
