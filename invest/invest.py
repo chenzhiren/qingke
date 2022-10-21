@@ -13,6 +13,7 @@ server=SSHTunnelForwarder(
        ssh_password=999555,
        remote_bind_address=('localhost',3306))
     
+server.start()       
 st.sidebar.title('清科项目')
 sidebar=st.sidebar.radio('',('资讯爬取和清洗','本周数据情况'))
 if sidebar=='资讯爬取和清洗':
