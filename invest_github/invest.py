@@ -9,7 +9,7 @@ st.sidebar.title('清科项目')
 sidebar=st.sidebar.radio('',('资讯爬取和清洗','本周数据情况'))
 
 if sidebar=='本周数据情况':
-       data=pd.read_excel(r'invest_github\qingke_sql.xlsx')
+       data=pd.read_excel('qingke_sql.xlsx')
        data = data.rename(columns={0: 'company_name', 1: 'base', 2: 'found_time', 3: 'field', 4: 'business', 5:'round', 6: 'currency',
              7: 'money', 8: 'investers', 9: 'financing_time', 10: 'create_time', 11: 'pici', 12: 'reaal_money',
              13:'fenceng',14:'in_out',15:'id'})
