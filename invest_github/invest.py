@@ -1,5 +1,4 @@
 import streamlit as st
-from get_news import qingkespider
 import pandas as pd
 import data_clean
 import money_change
