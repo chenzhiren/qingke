@@ -1,10 +1,8 @@
 import streamlit as st
 from get_news import qingkespider
-import pymysql
 import pandas as pd
 import data_clean
 import money_change
-from sqlalchemy import create_engine
 from ind_change import ind_change
 import data_analyse
 
