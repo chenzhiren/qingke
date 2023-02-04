@@ -1,9 +1,5 @@
 import streamlit as st
-
-import pymysql
 import pandas as pd
-import data_clean
-from sqlalchemy import create_engine
 import data_analyse
 import numpy as np
 st.set_page_config(
